@@ -5,14 +5,12 @@ namespace ImGuiForDesktop
 {
     void gui::main()
     {
-        bool p_open = true;
-
         ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoTitleBar
         | ImGuiWindowFlags_NoMove
         | ImGuiWindowFlags_NoResize
         | ImGuiWindowFlags_NoBringToFrontOnFocus;
 
-        ImGui::Begin("Desktop Imgui", &p_open, window_flags);
+        ImGui::Begin("Desktop Imgui", nullptr, window_flags);
         //Updates The Main Gui Window To The Size Of The Window
         ImGui::SetWindowSize(ImVec2(WindowSize::x, WindowSize::y));
         //Sets The Positon To 0 To Keep The Gui At The Top Corner Of the Screen
