@@ -59,6 +59,9 @@ int CALLBACK WinMain
     MSG msg;
     ImGuiForDesktop::gui gui;
 
+    // Initialises ImGui for Dx11
+    gui.initialise();
+
     ZeroMemory(&msg, sizeof(msg));
     while (msg.message != WM_QUIT)
     {
@@ -68,10 +71,6 @@ int CALLBACK WinMain
             ::DispatchMessage(&msg);
             continue;
         }
-
-        // Initialises ImGui for Dx11
-        if (!gui.intialised)
-            gui.initialise();
 
         gui.render();
 
