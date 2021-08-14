@@ -73,8 +73,6 @@ namespace ImGuiForDesktop
         ImGui::StyleColorsDark();
         io.IniFilename = NULL;
         io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Arial.ttf", 20);
-        ImGui::GetIO().MouseDrawCursor = true;
-        ImGui::GetIO().ConfigFlags &= ~ImGuiConfigFlags_NoMouse;
         ImGui_ImplWin32_Init(hwnd);
         ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
 
