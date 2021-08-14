@@ -65,6 +65,9 @@ int CALLBACK WinMain
     ZeroMemory(&msg, sizeof(msg));
     while (msg.message != WM_QUIT)
     {
+        // Limits cpu usage
+        Sleep(1);
+        
         if (::PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
         {
             ::TranslateMessage(&msg);
