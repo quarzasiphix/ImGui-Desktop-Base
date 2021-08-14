@@ -64,17 +64,17 @@ int CALLBACK WinMain
 
     ZeroMemory(&msg, sizeof(msg));
     while (msg.message != WM_QUIT)
-    {
-        // Limits cpu usage
-        Sleep(1);
-        
+    {   
         if (::PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
         {
             ::TranslateMessage(&msg);
             ::DispatchMessage(&msg);
             continue;
         }
-
+        
+        // Limits cpu usage
+        Sleep(1);
+        
         gui.render();
 
         g_pd3dDeviceContext->OMSetRenderTargets(1, &g_mainRenderTargetView, NULL);
