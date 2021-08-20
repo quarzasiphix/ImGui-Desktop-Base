@@ -21,6 +21,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gui.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiData.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\include\ImGui\imgui.cpp">
       <Filter>ImGui</Filter>
     </ClCompile>
@@ -36,19 +42,19 @@
     <ClCompile Include="..\include\ImGui\imgui_impl_win32.cpp">
       <Filter>ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="..\include\ImGui\imgui_widgets.cpp">
+    <ClCompile Include="..\include\ImGui\imgui_tables.cpp">
       <Filter>ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="gui.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiData.cpp">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="..\include\ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiData.hpp">
+      <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ImGui\imconfig.h">
       <Filter>ImGui</Filter>
@@ -74,13 +80,5 @@
     <ClInclude Include="..\include\ImGui\imstb_truetype.h">
       <Filter>ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="GuiData.hpp">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="..\include\ImGui\imgui.natvis">
-      <Filter>ImGui</Filter>
-    </Natvis>
   </ItemGroup>
 </Project>

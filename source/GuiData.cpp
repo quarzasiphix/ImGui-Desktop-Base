@@ -26,7 +26,7 @@ namespace ImGuiForDesktop
         style.ScrollbarRounding = 0;
         style.ItemInnerSpacing = spacing;
         style.FramePadding = padding;
-
+        
         style.Colors[ImGuiCol_Text] = ImVec4(2.00f, 2.00f, 0.90f, 0.90f);
         style.Colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.60f, 0.60f, 1.00f);
         style.Colors[ImGuiCol_WindowBg] = ImVec4(0.09f, 0.09f, 0.15f, 1.00f);
@@ -61,8 +61,6 @@ namespace ImGuiForDesktop
         style.Colors[ImGuiCol_PlotHistogram] = ImVec4(0.90f, 0.70f, 0.00f, 1.00f);
         style.Colors[ImGuiCol_PlotHistogramHovered] = ImVec4(1.00f, 0.60f, 0.00f, 1.00f);
         style.Colors[ImGuiCol_TextSelectedBg] = ImVec4(0.00f, 0.00f, 1.00f, 0.35f);
-        style.Colors[ImGuiCol_ModalWindowDarkening] = ImVec4(0.20f, 0.20f, 0.20f, 0.35f);
-
     }
 
     void gui::initialise()
@@ -92,13 +90,14 @@ namespace ImGuiForDesktop
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
 
+
+
         style();
         main();
 
         ImGui::End();
         ImGui::Render();
 
-        ImGui_ImplWin32_Init(hwnd);
         ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
         ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
     }

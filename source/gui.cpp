@@ -10,7 +10,15 @@ namespace ImGuiForDesktop
         | ImGuiWindowFlags_NoResize
         | ImGuiWindowFlags_NoBringToFrontOnFocus;
 
+        ImGuiStyle& style = ImGui::GetStyle();
+
+        // turns off window border
+        style.WindowBorderSize = 0.0f;
         ImGui::Begin("Desktop Imgui", nullptr, window_flags);
+        
+        // enables window border for other windows
+        style.WindowBorderSize = 1.0f;
+
         //Updates The Main Gui Window To The Size Of The Window
         ImGui::SetWindowSize(ImVec2(WindowSize::x, WindowSize::y));
         //Sets The Positon To 0 To Keep The Gui At The Top Corner Of the Screen
@@ -62,6 +70,12 @@ namespace ImGuiForDesktop
 
     void children::example()
     {
+        ImGuiViewport* viewport = ImGui::GetMainViewport();
+        ImGui::SetNextWindowPos(viewport->Pos);
+        ImGui::SetNextWindowSize(viewport->Size);
+        ImGui::SetNextWindowViewport(viewport->ID);
+        ImGui::ShowDemoWindow();
+
         ImGui::Text("example");
     }
 }

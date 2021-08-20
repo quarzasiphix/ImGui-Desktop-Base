@@ -156,6 +156,7 @@
     <ClCompile Include="..\include\ImGui\imgui_draw.cpp" />
     <ClCompile Include="..\include\ImGui\imgui_impl_dx11.cpp" />
     <ClCompile Include="..\include\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\include\ImGui\imgui_tables.cpp" />
     <ClCompile Include="..\include\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="gui.cpp" />
     <ClCompile Include="GuiData.cpp" />
@@ -172,9 +173,6 @@
     <ClInclude Include="..\include\ImGui\imstb_truetype.h" />
     <ClInclude Include="common.hpp" />
     <ClInclude Include="GuiData.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="..\include\ImGui\imgui.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
