@@ -39,7 +39,7 @@ namespace ImGuiForDesktop
                 tab = tabs::main;
             
             if (ImGui::Button("example", CatButtonSize))
-                tab = tabs::example;
+                tab = tabs::demo;
         }
         ImGui::NextColumn();
 
@@ -49,8 +49,8 @@ namespace ImGuiForDesktop
         case tabs::main:
             children::main();
             break;
-        case tabs::example:
-            children::example();
+        case tabs::demo:
+            children::demo();
             break;
         //If None Were Chosen, Load Main
             // At Launch, There Are No Selected Categories
@@ -68,14 +68,9 @@ namespace ImGuiForDesktop
         ImGui::Text("main");
     }
 
-    void children::example()
+    void children::demo()
     {
-        ImGuiViewport* viewport = ImGui::GetMainViewport();
-        ImGui::SetNextWindowPos(viewport->Pos);
-        ImGui::SetNextWindowSize(viewport->Size);
-        ImGui::SetNextWindowViewport(viewport->ID);
         ImGui::ShowDemoWindow();
-
-        ImGui::Text("example");
+        ImGui::Text("demo");
     }
 }

@@ -24,7 +24,7 @@ namespace ImGuiForDesktop
 	protected:
 		void main();
 
-		void example();
+		void demo();
 	};
 
 	class gui : children
@@ -41,7 +41,7 @@ namespace ImGuiForDesktop
 		enum class tabs
 		{
 			main,
-			example
+			demo
 		};
 
 		// Category Variable (Modified In gui.cpp)

@@ -81,7 +81,6 @@ namespace ImGuiForDesktop
 
     void gui::render()
     {
-        //GetClientRect(hwnd, &rc);
         ImGuiIO& io = ImGui::GetIO(); (void)io;
         WindowSize::x = io.DisplaySize.x;
         WindowSize::y = io.DisplaySize.y;
@@ -90,15 +89,11 @@ namespace ImGuiForDesktop
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
 
-
-
         style();
         main();
 
         ImGui::End();
         ImGui::Render();
-
-        ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
         ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
     }
 }
