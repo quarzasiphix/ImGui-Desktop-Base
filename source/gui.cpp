@@ -38,7 +38,7 @@ namespace ImGuiForDesktop
             if (ImGui::Button("main", CatButtonSize))
                 tab = tabs::main;
             
-            if (ImGui::Button("example", CatButtonSize))
+            if (ImGui::Button("demo", CatButtonSize))
                 tab = tabs::demo;
         }
         ImGui::NextColumn();
