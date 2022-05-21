@@ -1,4 +1,3 @@
-#pragma once
 #include "GuiData.hpp"
 
 namespace ImGuiForDesktop
